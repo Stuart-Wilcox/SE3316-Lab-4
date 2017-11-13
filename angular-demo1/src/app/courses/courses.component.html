@@ -1,0 +1,12 @@
+<h2>{{ title }}</h2>
+<ul>
+  <li *ngFor='let course of courses'>
+    {{ course }}
+  </li>
+</ul>
+<form (submit) = 'addCourse($event, course.value)'>
+  <input type="text" appAutoGrow #course />
+  <input type="submit" />
+</form>
+
+<br/>
